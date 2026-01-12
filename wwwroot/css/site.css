@@ -1,0 +1,450 @@
+:root {
+    --brand: #d11f28; /* FiringLine red */
+    --brand-dark: #a8151c;
+    --ink: #111827; /* modern near-black */
+    --muted: #6b7280;
+    --bg: #ffffff;
+    --bg-alt: #f8fafc; /* light, not dark */
+    --border: #e5e7eb;
+    --shadow: 0 12px 30px rgba(17,24,39,.10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+}
+
+.site-header .navbar-brand {
+    text-decoration: none;
+}
+
+.brand-logo {
+    height: 34px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.brand-logo-sm {
+    height: 28px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.brand-name {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+.nav-link {
+    color: #374151;
+    font-weight: 500;
+}
+
+    .nav-link:hover {
+        color: var(--brand);
+    }
+
+.btn-brand {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #fff;
+    font-weight: 600;
+}
+
+    .btn-brand:hover {
+        background: var(--brand-dark);
+        border-color: var(--brand-dark);
+        color: #fff;
+    }
+
+.btn-outline-brand {
+    border: 1px solid rgba(209,31,40,.35);
+    color: var(--brand);
+    font-weight: 600;
+    background: #fff;
+}
+
+    .btn-outline-brand:hover {
+        background: rgba(209,31,40,.06);
+        border-color: rgba(209,31,40,.55);
+        color: var(--brand);
+    }
+
+.text-brand {
+    color: var(--brand);
+}
+
+.link-brand {
+    color: var(--brand);
+    text-decoration: none;
+}
+
+    .link-brand:hover {
+        text-decoration: underline;
+    }
+
+.hero {
+    padding: 56px 0 30px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 65%, #f8fafc 100%);
+}
+
+.hero-media {
+    padding: 10px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.shadow-soft {
+    box-shadow: var(--shadow);
+}
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    background: rgba(209,31,40,.08);
+    color: #7f1016;
+    border: 1px solid rgba(209,31,40,.18);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.trust-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 576px) {
+    .trust-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.trust-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px 12px;
+    background: #fff;
+}
+
+    .trust-item i {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--bg-alt);
+        color: var(--brand);
+        font-size: 1.1rem;
+    }
+
+.section {
+    padding: 64px 0;
+}
+
+.section-alt {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-head {
+    max-width: 720px;
+}
+
+.card-service {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+    .card-service:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+
+.icon-pill {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: rgba(209,31,40,.08);
+    color: var(--brand);
+    border: 1px solid rgba(209,31,40,.18);
+    font-size: 1.25rem;
+}
+
+.coverage-grid {
+    display: grid;
+    gap: 10px;
+}
+
+.coverage-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+}
+
+    .coverage-item i {
+        color: var(--brand);
+    }
+
+.mini-steps {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.mini-step {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.step-dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.stat-card {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #fff;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(17,24,39,.05);
+}
+
+.stat-num {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--brand);
+}
+
+.stat-label {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.cta {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.cta-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 22px;
+}
+
+@media (min-width: 992px) {
+    .cta-card {
+        padding: 34px;
+    }
+}
+
+.site-footer {
+    background: #0b0f16; /* footer can be darker without making the site “too dark” */
+    color: #fff;
+}
+
+    .site-footer .text-muted {
+        color: rgba(255,255,255,.65) !important;
+    }
+
+.footer-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    display: inline-block;
+    color: rgba(255,255,255,.78);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+    .footer-link:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+.site-footer hr {
+    border-color: rgba(255,255,255,.10);
+}
+
+/* === Hero image fade overlay (like the mockup) === */
+.fade-media {
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Make sure the image fills nicely */
+    .fade-media .hero-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* White fade from LEFT -> transparent on RIGHT */
+    .fade-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-radius: 20px; /* match .hero-media radius */
+        background: linear-gradient( 90deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.55) 28%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.00) 70% );
+    }
+/* === Unified hero: image behind + fade from left (one container feel) === */
+.hero-unified {
+    padding: 40px 0 30px; /* similar to before */
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 65%, #f8fafc 100%);
+}
+
+.hero-shell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    background: #fff;
+    padding: 44px 28px; /* creates the “card” spacing */
+    min-height: 380px; /* keeps the hero tall enough */
+}
+
+    /* The image behind EVERYTHING */
+    .hero-shell::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/images/hero_meeting3.jpg") right center / cover no-repeat;
+        transform: scale(1.02); /* slight upscale hides edge artifacts */
+    }
+
+    /* The fade overlay that makes it feel like it comes from behind the left content */
+    .hero-shell::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient( 90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 30%, rgba(255,255,255,0.75) 48%, rgba(255,255,255,0.35) 62%, rgba(255,255,255,0.10) 72%, rgba(255,255,255,0.00) 82% );
+    }
+
+    /* Make sure your actual content sits above the background + overlay */
+    .hero-shell > .row {
+        position: relative;
+        z-index: 1;
+    }
+
+/* Ensures right side maintains height on large screens */
+.hero-spacer {
+    min-height: 320px;
+}
+
+/* Responsive: stronger fade on mobile so text stays readable */
+@media (max-width: 992px) {
+    .hero-shell {
+        padding: 34px 18px;
+        min-height: 420px;
+    }
+
+        .hero-shell::after {
+            background: linear-gradient( 90deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.96) 55%, rgba(255,255,255,0.75) 78%, rgba(255,255,255,0.25) 92%, rgba(255,255,255,0.00) 100% );
+        }
+}
+
+/* === Dark top nav to match footer === */
+.nav-dark {
+    background: #0b0f16; /* same as footer */
+    border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+    .nav-dark .brand-name {
+        color: #fff;
+    }
+
+    .nav-dark .nav-link {
+        color: rgba(255,255,255,.80);
+        font-weight: 600;
+    }
+
+        .nav-dark .nav-link:hover,
+        .nav-dark .nav-link:focus {
+            color: #fff;
+        }
+
+    /* Optional: subtle underline hover */
+    .nav-dark .nav-link {
+        position: relative;
+    }
+
+        .nav-dark .nav-link::after {
+            content: "";
+            position: absolute;
+            left: .5rem;
+            right: .5rem;
+            bottom: .25rem;
+            height: 2px;
+            background: var(--brand);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform .15s ease;
+            opacity: .9;
+        }
+
+        .nav-dark .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+    /* Make toggler icon visible on dark background */
+    .nav-dark .navbar-toggler {
+        border-color: rgba(255,255,255,.20);
+    }
+
+        .nav-dark .navbar-toggler:focus {
+            box-shadow: 0 0 0 .2rem rgba(209,31,40,.25);
+        }
+
+    /* Keep the red Enquire button looking good on dark */
+    .nav-dark .btn-brand {
+        box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    }
+
+    .nav-dark .brand-logo {
+        background: transparent;
+        border-radius: 8px;
+    }
