@@ -3,6 +3,12 @@
     --gallery-card-shadow-hover: 0 16px 30px rgba(17,24,39,.14);
 }
 
+.page-accent-line {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--brand), var(--brand-accent));
+}
+
 .page-hero {
     padding: 56px 0 32px;
     background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
