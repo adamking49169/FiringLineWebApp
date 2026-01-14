@@ -8,5 +8,9 @@ namespace FiringLineWebApp.Controllers
         {
             return View();
         }
+        public IActionResult Gallery()
+        {
+            return View();
+        }
     }
 }
