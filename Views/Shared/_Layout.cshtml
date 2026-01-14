@@ -1,5 +1,21 @@
 ﻿@{
     var title = ViewData["Title"] as string ?? "FiringLine Hospitality Co.";
+    var siteName = "FiringLine Hospitality Co.";
+    var serviceArea = "Northern Ireland and border counties";
+    var contactEmail = "firinglinehospitality@outlook.com";
+    var metaDescription = $"Temporary chef cover and hospitality support across {serviceArea}.";
+    var siteUrl = $"{Context.Request.Scheme}://{Context.Request.Host}";
+    var pageUrl = $"{siteUrl}{Context.Request.PathBase}{Context.Request.Path}";
+    var jsonLd = System.Text.Json.JsonSerializer.Serialize(new
+    {
+        @context = "https://schema.org",
+        @type = new[] { "LocalBusiness", "ProfessionalService" },
+        name = siteName,
+        description = metaDescription,
+        url = siteUrl,
+        areaServed = serviceArea,
+        email = contactEmail
+    });
 }
 
 <!doctype html>
@@ -8,7 +24,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>@title - FiringLine Hospitality Co.</title>
-
+    <meta name="description" content="@metaDescription" />
+    <meta property="og:title" content="@title - @siteName" />
+    <meta property="og:description" content="@metaDescription" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="@siteName" />
+    <meta property="og:url" content="@pageUrl" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@title - @siteName" />
+    <meta name="twitter:description" content="@metaDescription" />
+    <script type="application/ld+json">
+        @Html.Raw(jsonLd)
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
