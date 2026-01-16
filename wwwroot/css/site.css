@@ -378,13 +378,12 @@ stat-card {
     min-height: 380px; /* keeps the hero tall enough */
 }
 
-    /* The image behind EVERYTHING */
-    .hero-shell::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("/images/hero_meeting3.jpg") center / contain no-repeat;
-    }
+.hero-shell-image-backdrop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/images/hero_meeting3.jpg") center / contain no-repeat;
+}
 
  
 
@@ -399,11 +398,32 @@ stat-card {
     min-height: 320px;
 }
 
+.hero-carousel .carousel-item {
+    padding: 6px 0;
+}
+
+.hero-shell-image {
+    padding: 0;
+    background: #fff;
+}
+
+.hero-carousel-image {
+    display: block;
+    width: 100%;
+    min-height: 380px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
 /* Responsive: stronger fade on mobile so text stays readable */
 @media (max-width: 992px) {
     .hero-shell {
         padding: 34px 18px;
         min-height: 420px;
+    }
+    .hero-carousel-image {
+        min-height: 320px;
     }
 
        
