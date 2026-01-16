@@ -16,3 +16,15 @@ document.addEventListener("click", (e) => {
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: "smooth" });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const carouselEl = document.querySelector("#heroCarousel");
+    if (!carouselEl) return;
+
+    const bootstrap = window.bootstrap;
+    if (!bootstrap?.Carousel) return;
+
+    bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+        interval: 3000,
+        ride: "carousel"
+    });
+});
