@@ -383,8 +383,7 @@ stat-card {
         content: "";
         position: absolute;
         inset: 0;
-        background: url("/images/hero_meeting3.jpg") right center / cover no-repeat;
-        transform: scale(1.02); /* slight upscale hides edge artifacts */
+        background: url("/images/hero_meeting3.jpg") center / contain no-repeat;
     }
 
     /* The fade overlay that makes it feel like it comes from behind the left content */
