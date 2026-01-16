@@ -405,12 +405,12 @@ stat-card {
 .hero-shell-image {
     padding: 0;
     background: #fff;
+    min-height: 380px;
 }
 
 .hero-carousel-image {
     display: block;
     width: 100%;
-    min-height: 380px;
     height: 100%;
     object-fit: cover;
     border-radius: 24px;
@@ -422,10 +422,13 @@ stat-card {
         padding: 34px 18px;
         min-height: 420px;
     }
-    .hero-carousel-image {
+    .hero-shell-image {
         min-height: 320px;
     }
 
+    .hero-carousel-image {
+        height: 100%;
+    }
        
 }
 
