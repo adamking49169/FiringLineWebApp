@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!bootstrap?.Carousel) return;
 
     bootstrap.Carousel.getOrCreateInstance(carouselEl, {
-        interval: 3000,
+        interval: 6000,
+        pause: false,
         ride: "carousel"
     });
 });
